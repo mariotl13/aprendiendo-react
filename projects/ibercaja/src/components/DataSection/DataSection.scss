@@ -1,0 +1,16 @@
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+        border-left: 2px solid gray;
+        padding-left: 16px;
+    }
+
+    .switch-container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+}

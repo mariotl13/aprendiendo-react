@@ -1,0 +1,10 @@
+#layout {
+    display: flex;
+    flex: 1;
+
+    #main-content {
+        display: flex;
+        flex-direction: column;
+        flex: auto;
+    }
+}

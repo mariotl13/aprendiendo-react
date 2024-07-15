@@ -1,4 +1,4 @@
-.side-menu-group {
+.sidebar-group {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -26,6 +26,7 @@
                 width: 8px;
                 height: 8px;
                 border-radius: 50%;
+                margin-left: 8px;
 
                 &-pos {
                     background-color: green;
