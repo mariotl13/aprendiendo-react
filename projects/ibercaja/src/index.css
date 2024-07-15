@@ -33,6 +33,10 @@
     box-sizing: border-box;
 }
 
+span, p {
+    font-size: small;
+}
+
 
 #root {
     min-height: 100vh;

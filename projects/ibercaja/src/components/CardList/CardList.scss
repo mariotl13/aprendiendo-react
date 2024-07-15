@@ -1,0 +1,10 @@
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    &.table {
+        flex-direction: column;
+        gap: 1px;
+    }
+}

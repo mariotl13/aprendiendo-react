@@ -10,13 +10,9 @@
     background-color: var(--primary-color);
     color: white;
 
-    .header-options {
+    .header-group {
         display: flex;
-        gap: 16px;
-    }
-
-    .header-user {
-        display: flex;
+        align-items: center;
         gap: 16px;
     }
 }
