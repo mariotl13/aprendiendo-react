@@ -1,0 +1,44 @@
+
+:root {
+    --primary-color: #0b7ad0;
+    --secondary-color: #2d5b7f;
+    --tertiary-color: #33393e;
+    --quaternary-color: #dd4c40;
+    --quinary-color: #f5f8fa;
+
+    --success-color: #4ab83e;
+    --error-color: #d83838;
+    --info-color: #0b7ad0;
+    --alert-color: #fdaf3c;
+
+    --alt1-color: #fdaf3c;
+    --alt2-color: #4fc4cf;
+    --alt3-color: #8053e5;
+    --alt4-color: #d25bae;
+    --alt5-color: #efe258;
+
+    --bgd1-color: #6c8ca5;
+    --bgd2-color: #d5dee5;
+    --bgd3-color: #dde3ee;
+    --bgd4-color: #f4f7fd;
+    --bgd5-color: #ffffff;
+}
+
+* {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    /* font-weight: <weight>; */
+    font-style: normal;
+    font-variation-settings: "slnt" 0;
+}
+
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.layout{
+    display: flex;
+    flex: 1;
+}
