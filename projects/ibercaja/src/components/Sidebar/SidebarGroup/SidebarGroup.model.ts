@@ -1,7 +1,7 @@
 
 
 export interface SidebarGroupActivity {
-    date: Date,
+    date: string,
     items: SidebarGroupActivityItem[]
 }
 

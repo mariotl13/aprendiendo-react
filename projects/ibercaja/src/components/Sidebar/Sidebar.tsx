@@ -1,53 +1,30 @@
-import './Sidebar.scss';
-import SidebarGroup from './SidebarGroup/SidebarGroup';
-import { SidebarGroupActivity } from './SidebarGroup/SidebarGroup.model';
+import "./Sidebar.scss";
+import SidebarGroup from "./SidebarGroup/SidebarGroup";
+import { SidebarGroupActivity } from "./SidebarGroup/SidebarGroup.model";
+import { useState, useEffect } from "react";
 
 export default function Sidebar() {
+	const [actividades, setActividades] = useState<SidebarGroupActivity[]>([]);
 
-    const RECENT_ACTIVITIES: SidebarGroupActivity[] = [
-        {
-            date: new Date(2024,1,1),
-            items: [
-                {
-                    title: 'Pago nóminas',
-                    price: -1000
-                },{
-                    title: 'Pago nóminas',
-                    price: 799
-                },{
-                    title: 'Pago nóminas',
-                    price: 25555
-                }
-            ]
-        },
-        {
-            date: new Date(2024,1,2),
-            items: [
-                {
-                    title: 'Pago nóminas',
-                    price: -100000
-                },{
-                    title: 'Pago nóminas',
-                    price: 1000000
-                },{
-                    title: 'Pago nóminas',
-                    price: 23
-                },{
-                    title: 'Pago nóminas',
-                    price: -23
-                },{
-                    title: 'Pago nóminas',
-                    price: 1
-                }
-            ]
-        }
-    ]
+	useEffect(() => {
+		async function getCuentas() {
+			const response = await fetch("/assets/api/actividades.json");
+			const data = await response.json();
+			setActividades(data);
+		}
 
+		getCuentas();
+	}, []);
 
-    return <div id='sidebar'>
-        <h3>Actividad reciente</h3>
-        {RECENT_ACTIVITIES.map(activity => (
-            <SidebarGroup activity={activity} key={activity.date.getTime()}></SidebarGroup>
-        ))}
-    </div>
+	return (
+		<div id="sidebar">
+			<h3>Actividad reciente</h3>
+			{actividades.map((activity) => (
+				<SidebarGroup
+					activity={activity}
+					key={activity.date}
+				></SidebarGroup>
+			))}
+		</div>
+	);
 }

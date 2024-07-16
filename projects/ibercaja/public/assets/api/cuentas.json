@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Pago nóminas",
+        "iban": "*5413",
+        "amount": 28329398,
+        "available": 2322
+    },
+    {
+        "title": "Pago nóminas",
+        "iban": "*3975",
+        "amount": 28329398,
+        "available": 2322
+    },
+    {
+        "title": "Pago nóminas",
+        "iban": "*1972",
+        "amount": 28329398,
+        "available": 2322
+    }
+]

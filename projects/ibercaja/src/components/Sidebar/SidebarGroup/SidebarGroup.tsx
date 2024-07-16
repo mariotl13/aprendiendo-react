@@ -7,11 +7,9 @@ export default function SidebarGroup({
 }: {
 	activity: SidebarGroupActivity;
 }) {
-	const intlConfig = Intl.DateTimeFormat("es-ES");
-
 	return (
 		<div className="sidebar-group">
-			<span className="chip">{intlConfig.format(activity.date)}</span>
+			<span className="chip">{activity.date}</span>
 			<div className="items">
 				{activity.items.map((item) => (
 					<div className="item" key={item.title + item.price}>
