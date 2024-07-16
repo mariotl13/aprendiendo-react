@@ -1,3 +1,9 @@
 #user-menu {
     padding: 32px;
 }
+
+@media (max-width: 1023px) {
+    #user-menu .tabs {
+        flex-direction: column;
+    }
+}

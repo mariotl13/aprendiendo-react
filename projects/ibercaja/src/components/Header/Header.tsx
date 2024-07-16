@@ -3,7 +3,7 @@ import "./Header.scss";
 export default function Header() {
 	return (
 		<div id="header">
-			<div className="header-group">
+			<div className="header-group header-group-small">
 				<button>icon</button>
 				<span>PRODUCTOS</span>
 				<span>OPERATIVAS</span>

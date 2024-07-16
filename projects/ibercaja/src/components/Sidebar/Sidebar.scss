@@ -1,10 +1,54 @@
 #sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-
     width: 330px;
     padding: 24px;
 
+    background: white;
     border-left: 1px solid grey;
+
+    #sidebar-content {
+        position: sticky;
+        top: 0;
+
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    #sidebar-content-closed {
+        display: none;
+
+        button {
+            width: fit-content;
+        }
+    }
+}
+
+@media (max-width: 1279px) and (min-width: 1024px) {
+    #sidebar {
+        height: calc(100vh - 72px - 106px);
+
+        &.opened {
+            position: absolute;
+            right: 0;
+        }
+
+        &.closed {
+            width: 30px;
+            padding: 24px 4px;
+
+            #sidebar-content {
+                display: none;
+            }
+        }
+
+        #sidebar-content-closed {
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 1023px) {
+    #sidebar {
+        display: none;
+    }
 }
