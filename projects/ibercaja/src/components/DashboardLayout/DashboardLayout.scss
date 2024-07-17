@@ -8,3 +8,9 @@
         flex: auto;
     }
 }
+
+@media (max-width: 1023px) {
+    #layout {
+        flex-direction: column;
+    }
+}
