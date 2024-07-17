@@ -1,0 +1,15 @@
+{
+    "user-menu": {
+        "morning": "Good morning",
+        "accounts": "Accounts cards and POS",
+        "financing": "Financing",
+        "trade": "Foreign trade",
+        "payments": "Collections and payments"
+    },
+    "accounts": {
+        "accounts": "Accounts"
+    },
+    "sidebar": {
+        "activity": "Recent activity"
+    }
+}

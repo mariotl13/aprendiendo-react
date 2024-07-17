@@ -1,12 +1,7 @@
-
-import DashboardLayout from './components/DashboardLayout/DashboardLayout'
-
+import DashboardLayout from "./components/DashboardLayout/DashboardLayout";
 
 function App() {
-
-    return (
-        <DashboardLayout />
-    )
+	return <DashboardLayout />;
 }
 
-export default App
+export default App;

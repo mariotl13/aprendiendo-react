@@ -1,9 +1,12 @@
+import { useTranslation } from "react-i18next";
 import "./Sidebar.scss";
 import SidebarGroup from "./SidebarGroup/SidebarGroup";
 import { SidebarGroupActivity } from "./SidebarGroup/SidebarGroup.model";
 import { useState, useEffect } from "react";
 
 export default function Sidebar() {
+	const { t } = useTranslation();
+
 	const [actividades, setActividades] = useState<SidebarGroupActivity[]>([]);
 
 	// For medium screen only
@@ -29,7 +32,7 @@ export default function Sidebar() {
 				</button>
 			</div>
 			<div id="sidebar-content">
-				<h3>Actividad reciente</h3>
+				<h3>{t("sidebar.activity")}</h3>
 				{actividades.map((activity) => (
 					<SidebarGroup
 						activity={activity}

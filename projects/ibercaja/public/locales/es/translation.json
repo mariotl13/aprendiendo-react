@@ -1,0 +1,15 @@
+{
+    "user-menu": {
+        "morning": "Buenos días",
+        "accounts": "Cuentas tarjetas y TPVS",
+        "financing": "Finaciación",
+        "trade": "Comercio exterior",
+        "payments": "Cobros y pagos"
+    },
+    "accounts": {
+        "accounts": "Cuentas"
+    },
+    "sidebar": {
+        "activity": "Actividad reciente"
+    }
+}
