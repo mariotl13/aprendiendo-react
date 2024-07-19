@@ -1,8 +1,11 @@
 import { useTranslation } from "react-i18next";
 import classes from "./Header.module.scss";
+import { useContext } from "react";
+import { UserContext } from "../../store/UserContext";
 
 export default function Header() {
 	const { i18n } = useTranslation();
+	const { name } = useContext(UserContext);
 
 	const handleOnLangChange = (e) => {
 		i18n.changeLanguage(e.target.value);
@@ -28,7 +31,7 @@ export default function Header() {
 					<option value="es">Español</option>
 					<option value="en">Inglés</option>
 				</select>
-				<span>Usuario</span>
+				<span>{name}</span>
 				<button>LOGO</button>
 			</div>
 		</div>
