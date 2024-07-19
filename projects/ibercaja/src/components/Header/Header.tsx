@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import "./Header.scss";
+import classes from "./Header.module.scss";
 
 export default function Header() {
 	const { i18n } = useTranslation();
@@ -9,14 +9,16 @@ export default function Header() {
 	};
 
 	return (
-		<div id="header">
-			<div className="header-group header-group-small">
+		<div className={classes.header}>
+			<div
+				className={`${classes["header-group"]} ${classes["header-group-small"]}`}
+			>
 				<button>icon</button>
 				<span>PRODUCTOS</span>
 				<span>OPERATIVAS</span>
 				<input type="text" />
 			</div>
-			<div className="header-group">
+			<div className={classes["header-group"]}>
 				<select
 					name="lang"
 					id="lang"

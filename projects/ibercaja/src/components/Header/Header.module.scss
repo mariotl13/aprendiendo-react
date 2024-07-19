@@ -1,4 +1,4 @@
-#header {
+.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -18,7 +18,7 @@
 }
 
 @media (max-width: 1023px) {
-    #header .header-group-small {
+    .header .header-group-small {
         display: none;
     }
 }
