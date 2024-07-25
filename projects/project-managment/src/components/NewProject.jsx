@@ -2,8 +2,12 @@
 import { useRef } from "react"
 import Input from "./Input"
 import Modal from "./Modal"
+import { useContext } from "react";
+import { ProjectsContext } from "../store/ProjectsContext";
 
-export default function NewProject({ onNewProject, onCancelProject }) {
+export default function NewProject() {
+
+    const { dispatchProjects } = useContext(ProjectsContext);
 
     const modalRef = useRef();
 
@@ -16,7 +20,7 @@ export default function NewProject({ onNewProject, onCancelProject }) {
         const description = descriptionRef.current.value;
         const dueDate = dueDateRef.current.value;
         if (title && description && dueDate) {
-            onNewProject(title, description, dueDate)
+            dispatchProjects({ type: 'ADD_NEW', payload: { title, description, dueDate } })
         } else {
             modalRef.current.open();
         }
@@ -30,7 +34,7 @@ export default function NewProject({ onNewProject, onCancelProject }) {
         </Modal>
 
         <menu className="flex items-center justify-end gap-4 my-4">
-            <li><button onClick={onCancelProject} className="text-stone-800 hover:text-stone-950">Cancel</button></li>
+            <li><button onClick={() => dispatchProjects({ type: 'CANCEL_NEW' })} className="text-stone-800 hover:text-stone-950">Cancel</button></li>
             <li><button onClick={handleOnSave} className="px-6 py-2 rounded-md bg-stone-800 text-stone-50 hover:bg-stone-950">Save</button></li>
         </menu>
         <div>
